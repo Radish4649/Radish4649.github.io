@@ -1,0 +1,140 @@
+/*
+CLASSES:
+cat: categories, the box that contains an entire project
+img: image
+txt: text
+*/
+
+/* -- general -- */
+
+.grid {
+    display: grid;
+    grid-template-rows: 20vh auto;
+    row-gap: 5vh;
+
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgb(227,227,227);
+    background: linear-gradient(180deg, rgba(227,227,227,1) 75%, rgba(240,159,37,1) 100%);
+}
+
+/* -- heading -- */
+
+.heading {
+    grid-row: 1;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.heading h1 {
+    font-weight: 600;
+}
+
+.heading h3 {
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* -- categories -- */
+
+.cat-box {
+    grid-row: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 20px;
+}
+
+
+.txt {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.txt h2 {
+    font-style: regular;
+    font-weight: 400;
+}
+
+.txt p, .txt a {
+    font-style: light;
+    font-weight: 300;
+}
+
+/* -- buttons -- */
+
+$button-primary: black;
+$button-secondary: white;
+
+.btn {
+    padding: 6px 16px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: $button-secondary;
+    background-color: $button-primary;
+}
+
+.btn:hover {
+    color: $button-primary;
+    background-color: $button-secondary;
+}
+
+/* -- cat images -- */
+
+.img {
+    height: 30vh;
+    position: relative;
+
+    margin: 0 auto;
+}
+
+.img:hover {
+    animation: hover;
+    animation-duration: 2s;
+}
+
+#img-dice {
+    content: url(../images/dice.png);
+}
+
+#img-tarot {
+    content: url(../images/cartomancer.png);
+}
+
+#img-git {
+    content: url(../images/github.png);
+}
+
+/* -- image animations -- */
+
+@keyframes hover {
+    from {top: 0px;}
+    to {top: -30px;}
+}
+
+/* -- resizing -- */
+
+@media (max-width: 800px) {
+    
+    .grid {
+        height: auto;
+        overflow: auto;
+    }
+
+    .cat-box {
+        flex-direction: column;
+    }
+    .cat {
+        width: 80vw;
+        height: auto;
+        margin: 0 auto;
+    }
+}
