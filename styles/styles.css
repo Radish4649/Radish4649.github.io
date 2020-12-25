@@ -95,6 +95,12 @@ txt: text
   height: 30vh;
   position: relative;
   margin: 0 auto;
+  -webkit-animation: dehover;
+          animation: dehover;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .img:hover {
@@ -102,6 +108,8 @@ txt: text
           animation: hover;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 #img-dice {
@@ -131,6 +139,24 @@ txt: text
   }
   to {
     top: -30px;
+  }
+}
+
+@-webkit-keyframes dehover {
+  from {
+    top: -20px;
+  }
+  to {
+    top: 0px;
+  }
+}
+
+@keyframes dehover {
+  from {
+    top: -20px;
+  }
+  to {
+    top: 0px;
   }
 }
 

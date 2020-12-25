@@ -92,13 +92,17 @@ $button-secondary: white;
 .img {
     height: 30vh;
     position: relative;
-
     margin: 0 auto;
+
+    animation: dehover;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
 
 .img:hover {
     animation: hover;
     animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
 
 #img-dice {
@@ -118,6 +122,11 @@ $button-secondary: white;
 @keyframes hover {
     from {top: 0px;}
     to {top: -30px;}
+}
+
+@keyframes dehover {
+    from {top: -20px;}
+    to {top: 0px;}
 }
 
 /* -- resizing -- */
