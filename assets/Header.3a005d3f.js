@@ -1,1 +1,0 @@
-import{o as t,c as e,t as n}from"./vendor.75db89f3.js";const o={name:"Header",props:["text"]},r={class:"text-blue-900 p-10 text-center font-bold text-4xl md:text-7xl select-none"};o.render=function(o,s,x,a,c,d){return t(),e("h2",r,n(x.text)+" ✨ ",1)};export{o as _};
